@@ -1,16 +1,15 @@
+#!/usr/bin/env python3
 # The Hungarian government maximized the cheap electricity and nat-gas quota for their citizens from 01st August 2022
 # Here is a simple calculator for the new electricity and nat-gas prices
 
-e_meter = input("Mi az e havi elektromos fogyasztás (KWh): ")  # Add this month energy usage
-e_meter = int(e_meter)
-g_meter = input("Mi az e havi gáz fogyasztás (m3): ")  # Add this month nat-gas usage
-g_meter = int(g_meter)
-el_price_control = 36.9  # The fixed electricity price within quota
-natg_price_control = 111.44  # The fixed Nat-Gas price within quota
-e_market_price = input("Add meg az áram piaci árát (Ft/KWh): ")  # Add the actual market price of the energy
-e_market_price = int(e_market_price)
-natg_market_price = input("Add meg a gáz piaci árát (Ft/m3): ")  # Add the actual market price of the nat-gas
-natg_market_price = int(natg_market_price)
+e_meter = int(input("Mi az e havi elektromos fogyasztás (KWh): "))  # Add this month energy usage
+g_meter = int(input("Mi az e havi gáz fogyasztás (m3): "))  # Add this month nat-gas usage
+e_market_price = int(input("Add meg az áram piaci árát (Ft/KWh): "))  # Add the actual market price of the energy
+natg_market_price = int(input("Add meg a gáz piaci árát (Ft/m3): "))  # Add the actual market price of the nat-gas
+
+
+el_price_control = 36.9     # The fixed electricity price within quota
+natg_price_control = 111.44     # The fixed Nat-Gas price within quota
 
 if 0 < e_meter <= 210:
     print("E havi villany fogyasztás költsége: ", e_meter * el_price_control, " Ft")  # The calculated energy cost with pricecontrols

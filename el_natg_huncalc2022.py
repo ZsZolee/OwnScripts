@@ -23,6 +23,7 @@ while e_meter < 0:
     e_meter = int(input("Mi az e havi áramfogyasztás (KWh): "))  # Add this month electricity usage
 else:
     g_meter = int(input("Mi az e havi gázfogyasztás (m3): "))  # Add this month nat-gas usage
+    print('\n')
 while g_meter <= 0:
     print("Nem valós gázfogyasztási adatokat adott meg.")  # Not real nat-gas usage given
     g_meter = int(input("Mi az e havi gázfogyasztás (m3): "))  # Add this month nat-gas usage
